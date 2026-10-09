@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Contacto - PixelNorte</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header id="site-header">
+  <nav id="nav-principal">
+
+    <img src="LogoPixelNorte.png" alt="Logo de PixelNorte" width="128" height="128">
+
+    <ul>
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="servicios.html">Servicios</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+  </nav>
+</header>
+<main>
+  <section id="contacto">
+    <h2>Contacto</h2>
+    <p>Completa el formulario y nos pondremos en contacto contigo.</p>
+
+    <form id="formulario-contacto">
+  <div>
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" name="nombre" required>
+  </div>
+
+  <div>
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+  </div>
+
+  <div>
+    <label for="telefono">Teléfono:</label>
+    <input type="tel" id="telefono" name="telefono">
+  </div>
+
+  <div>
+    <label for="servicio">Servicio de interés:</label>
+    <select id="servicio" name="servicio">
+      <option value="diseño">Diseño Web</option>
+      <option value="seo">SEO</option>
+      <option value="marketing">Marketing Digital</option>
+      <option value="consultoria">Consultoría</option>
+    </select>
+  </div>
+
+  <fieldset class="preferencias">
+    <legend>Preferencia de contacto:</legend>
+
+    <label>
+      <input type="checkbox" name="preferencia" value="email">
+      Email
+    </label>
+
+    <label>
+      <input type="checkbox" name="preferencia" value="telefono">
+      Teléfono
+    </label>
+
+    <label>
+      <input type="checkbox" name="preferencia" value="whatsapp">
+      WhatsApp
+    </label>
+  </fieldset>
+
+  <div class="campo-mensaje">
+    <label for="mensaje">Mensaje:</label>
+    <textarea id="mensaje" name="mensaje"></textarea>
+  </div>
+
+  <button type="submit">Enviar</button>
+</form>
+  </section>
+</main>
+
+<footer>
+    <p>PixelNorte © 2026</p>
+  </footer>
+</body>
+</html>

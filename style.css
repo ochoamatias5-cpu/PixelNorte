@@ -1,0 +1,252 @@
+/* Paleta PixelNorte
+Principal:
+
+zul profundo    #002D72	Fondo de encabezado, botones principales
+Azul medio		#005EB8	Tipografía destacada, enlaces
+Azul claro		#66B2FF	Detalles, íconos, hover states
+Blanco nieve	#FFFFFF	Fondo general, contraste con azules
+
+Secundario:
+
+Amarillo sol		#FFD200	Acentos, íconos, detalles cálidos
+Naranja amanecer	#FF7A00	Gradientes, botones secundarios
+Azul estrella		#009FE3	Elementos digitales, íconos pixelados
+*/
+/* =========================
+   Parte 1 — Base y tipografía
+   ========================= */
+*{
+  box-sizing: border-box; /* Incluye padding y borde dentro del ancho total. */
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif; /* Define la familia tipográfica general. */
+  line-height: 1.5; /* Separa verticalmente las líneas de texto. */
+  color: #005EB8;   /* Azul medio para texto destacado */
+  background-color: #FFFFFF; /* Blanco nieve como fondo general */
+  margin: 0; /* Elimina el margen predeterminado del navegador. */
+}
+
+h1 {
+  font-size: clamp(36px, 6vw, 61px); /* Adapta el título al tamaño de pantalla. */
+  color: #002D72; /* Azul profundo */
+  line-height: 1.3; /* Controla la altura de las líneas del título. */
+  text-align: left; /* Mantiene el título alineado con el contenido. */
+}
+
+h2 {
+  font-size: 1.6em; /* Hace el subtítulo más grande que el texto normal. */
+  color: #005EB8; /* Azul medio */
+  line-height: 1.4; /* Mejora el espacio entre líneas del subtítulo. */
+}
+p {
+  font-family: Arial, Helvetica, sans-serif;   /* Tipografía clara */
+  font-size: 16px;                  /* Tamaño de letra */
+  line-height: 1.6;                 /* Espaciado entre líneas */
+  color: #005EB8;                      /* Color del texto */
+  margin-bottom: 15px;              /* Espacio entre párrafos */
+  text-align: justify;              /* Justifica el texto */
+}
+
+#bienvenida .intro-servicios {
+  text-indent: 0; /* Evita la sangría en el texto introductorio de servicios. */
+}
+
+.lista-servicios {
+  padding-left: 2em; /* Deja espacio para la sangría y los marcadores. */
+  color: #005EB8; /* Define el color del texto de la lista. */
+}
+
+.lista-servicios li {
+  margin-bottom: 10px; /* Separa verticalmente cada servicio. */
+}
+
+/* =========================
+   Parte 2 — Header y navegación
+   ========================= */
+#site-header {
+    background-color: #002D72;
+    color: #FFFFFF;
+    height: 144px;
+    padding: 2px 16px; /* Menos alto, mantiene espacio lateral */
+  }
+
+#nav-principal {
+  display: flex; /* Coloca logo y menú en una misma fila. */
+  align-items: center; /* Centra los elementos verticalmente. */
+  height: 100%;
+  gap: 24px; /* Separa el logo del menú. */
+  margin: 0; /* Elimina márgenes predeterminados. */
+  padding: 0; /* Elimina relleno predeterminado. */
+}
+
+#nav-principal img {
+  display: block;
+  width: 230px;
+  height: 230px;
+}
+
+#nav-principal ul {
+  display: flex; /* Organiza los enlaces horizontalmente. */
+  flex-direction: row; /* Define una fila para los elementos del menú. */
+  align-items: center; /* Alinea los enlaces verticalmente. */
+  gap: 24px; /* Separa los enlaces entre sí. */
+  list-style: none; /* Quita las viñetas de la lista. */
+  margin: 0; /* Quita el margen predeterminado de la lista. */
+  padding: 0; /* Quita el relleno predeterminado de la lista. */
+}
+
+#nav-principal li {
+  display: inline-block; /* Permite que cada elemento ocupe su contenido. */
+}
+
+#nav-principal a {
+  color: #66B2FF; /* Define el color de los enlaces. */
+  text-decoration: none; /* Quita el subrayado predeterminado. */
+  white-space: nowrap; /* Evita que el texto del enlace se parta en varias líneas. */
+}
+
+/* =========================
+   Parte 3 — Contenido de Inicio
+   ========================= */
+#bienvenida,
+#quienes-somos {
+  padding: 24px 0; /* Separa el contenido verticalmente sin centrarlo en una caja. */
+  max-width: 100%; /* Limita el ancho para facilitar la lectura. */
+  margin: 0; /* Evita añadir centrado horizontal innecesario. */
+}
+
+#quienes-somos ul {
+  display: flex; /* Convierte los valores en elementos flexibles. */
+  flex-wrap: wrap; /* Permite que las tarjetas pasen a otra línea. */
+  gap: 16px; /* Separa las tarjetas entre sí. */
+  list-style: none; /* Quita las viñetas de los valores. */
+  padding: 0; /* Quita el relleno predeterminado de la lista. */
+}
+
+#quienes-somos li {
+  border: 1px solid #009FE3; /* Azul estrella */
+  border-radius: 8px; /* Redondea ligeramente las esquinas. */
+  padding: 12px; /* Crea espacio interior en cada tarjeta. */
+  flex: 1 1 calc(33% - 16px); /* Busca mostrar tres tarjetas por fila. */
+  background-color: #f9f9f9; /* Distingue las tarjetas del fondo. */
+}
+
+/* =========================
+   Parte 4 — Tabla de servicios
+   ========================= */
+#tabla-servicios {
+  width: 100%; /* Hace que la tabla ocupe todo el ancho disponible. */
+  border-collapse: collapse; /* Une los bordes de las celdas. */
+}
+
+#tabla-servicios th,
+#tabla-servicios td {
+  border: 1px solid #cccccc; /* Dibuja el borde de cada celda. */
+  padding: 8px; /* Separa el contenido del borde. */
+}
+
+#tabla-servicios th {
+  background-color: #005EB8; /* Azul medio */
+  color: #FFFFFF;
+}
+
+#tabla-servicios tr:nth-child(even) {
+  background-color: #66B2FF; /* Azul claro alterno */
+  color: #002D72;
+}
+
+/* =========================
+   Parte 5 — Formulario de contacto
+   ========================= */
+main {
+  max-width: 1200px; /* Permite una distribución más amplia del contenido. */
+  margin: 0 auto;
+  padding: 24px 40px; /* Deja espacio lateral sin encerrar demasiado el contenido. */
+}
+
+#contacto {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+#formulario-contacto {
+  display: grid; /* Organiza los campos mediante CSS Grid. */
+  grid-template-columns: 1fr 1fr; /* Crea dos columnas del mismo tamaño. */
+  gap: 16px; /* Separa filas y columnas del formulario. */
+}
+
+#formulario-contacto label {
+  display: block; /* Coloca la etiqueta en su propia línea. */
+  margin-bottom: 4px; /* Separa la etiqueta del campo. */
+}
+
+#formulario-contacto input:not([type="checkbox"]),
+#formulario-contacto select,
+#formulario-contacto textarea {
+  width: 100%;
+  padding: 8px;
+}
+
+#formulario-contacto textarea {
+  min-height: 120px; /* Define una altura mínima para el mensaje. */
+  resize: vertical; /* Permite cambiar solo la altura del área de texto. */
+}
+
+#formulario-contacto .preferencias,
+#formulario-contacto .campo-mensaje,
+#formulario-contacto button {
+  grid-column: 1 / -1; /* Hace que estos elementos ocupen ambas columnas. */
+}
+
+.opciones-preferencia {
+  display: flex; /* Coloca las opciones en una fila. */
+  gap: 24px; /* Separa las opciones entre sí. */
+  margin-top: 8px; /* Separa las opciones de su etiqueta. */
+}
+
+.opciones-preferencia label {
+  display: inline-flex !important; /* Alinea cada casilla con su texto. */
+  align-items: center; /* Centra casilla y texto verticalmente. */
+  gap: 6px; /* Separa la casilla de su etiqueta. */
+  margin: 0; /* Elimina el margen general de las etiquetas. */
+}
+
+.opciones-preferencia input[type="checkbox"] {
+  width: auto; /* Conserva el tamaño natural de la casilla. */
+}
+
+@media (max-width: 600px) {
+  #formulario-contacto {
+    grid-template-columns: 1fr; /* Usa una sola columna en pantallas pequeñas. */
+  }
+
+  .opciones-preferencia {
+    flex-direction: column; /* Apila las opciones en móviles. */
+    gap: 10px; /* Reduce el espacio entre opciones en móviles. */
+  }
+}
+
+#formulario-contacto button {
+  grid-column: 1 / -1; /* Hace que el botón ocupe todo el ancho. */
+  background-color: #005EB8; /* Define el color normal del botón. */
+  color: #FFFFFF; /* Define el color del texto del botón. */
+  border: none; /* Quita el borde predeterminado. */
+  padding: 10px 18px; /* Aumenta el espacio interno del botón. */
+  cursor: pointer; /* Muestra que el botón se puede pulsar. */
+  transition: background-color 0.3s ease; /* Suaviza el cambio de color. */
+}
+
+#formulario-contacto button:hover {
+  background-color: #FF7A00; /* Cambia el botón a naranja al pasar el mouse. */
+}
+
+@media (max-width: 600px) {
+  main {
+    padding: 20px; /* Reduce el espacio lateral en pantallas pequeñas. */
+  }
+
+  #formulario-contacto {
+    grid-template-columns: 1fr; /* Mantiene una columna en pantallas pequeñas. */
+  }
+}
