@@ -1,0 +1,13 @@
+# Archivos temporales
+*~
+*.swp
+
+# logs
+*.log
+
+# Configuración local
+.*nv
+
+# Notas personales
+notas.txt
+
