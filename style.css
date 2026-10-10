@@ -23,7 +23,7 @@ body {
   font-family: Arial, Helvetica, sans-serif; /* Define la familia tipográfica general. */
   line-height: 1.5; /* Separa verticalmente las líneas de texto. */
   color: #005EB8;   /* Azul medio para texto destacado */
-  background-color: #FFFFFF; /* Blanco nieve como fondo general */
+  background-color: #d80e0e; /* Blanco nieve #FFFFFF como fondo general */
   margin: 0; /* Elimina el margen predeterminado del navegador. */
 }
 
