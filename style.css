@@ -20,7 +20,7 @@ Azul estrella		#009FE3	Elementos digitales, íconos pixelados
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif; /* Define la familia tipográfica general. */
+  font-family: 'Cormorant Garamond', serif; /* Define la familia tipográfica general. */
   line-height: 1.5; /* Separa verticalmente las líneas de texto. */
   color: #005EB8;   /* Azul medio para texto destacado */
   background-color: #d80e0e; /* Blanco nieve #FFFFFF como fondo general */
