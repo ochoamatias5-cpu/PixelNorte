@@ -5,6 +5,9 @@
 # logs
 *.log
 
+# Archivos del sistema
+.DS_Store
+
 # Configuración local
 .*nv
 
