@@ -9,7 +9,7 @@
 .DS_Store
 
 # Configuración local
-.*nv
+*.env
 
 # Notas personales
 notas.txt
